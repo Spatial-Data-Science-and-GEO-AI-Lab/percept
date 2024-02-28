@@ -7,3 +7,6 @@ Please see the following repositories for the component sub-projects:
 * [Frontend](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-frontend)
 * [Backend](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-backend)
 
+## Data
+
+Publicly-accessible data used in papers and examples may be viewed in the [data-samples](data-samples) directory.
