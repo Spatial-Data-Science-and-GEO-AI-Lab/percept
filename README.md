@@ -1,3 +1,5 @@
+<img src="https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-frontend/blob/main/public/rate_sample1.jpg" width="300">
+
 Homepage of the human perception and volunteered street view imagery (VSVI) project
 
 ## Sub-projects
