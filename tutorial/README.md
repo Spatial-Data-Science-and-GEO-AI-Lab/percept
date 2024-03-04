@@ -12,6 +12,12 @@ In the end, you will need to copy the text in the field `Client Token` from the 
 
 Tokens are like passwords, so do NOT commit the token file to a repository, do not include your token in any code file, and in fact if you use `git` then adding `token.txt` to your `.gitignore` file is a good idea (there are similar features in other version control systems too).
 
+## Getting our software
+
+- Please clone the [percept-vsvi-filter](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter) repository and open a shell in that directory.
+
+e.g. `git clone https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter && cd percept-vsvi-filter`
+
 ## Downloading the imagery from Mapillary
 
 Please see [downloading.md](downloading.md).
