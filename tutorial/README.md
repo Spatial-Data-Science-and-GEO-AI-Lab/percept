@@ -20,9 +20,11 @@ Tokens are like passwords, so do NOT commit the token file to a repository, do n
 
 ## Downloading the imagery from Mapillary
 
-Please see [downloading.md](downloading.md).
+Please see the [Downloading](downloading.md) chapter.
 
 ## Processing and filtering the imagery
+
+Please see the [Processing](processing.md) chapter.
 
 ## Configuring the backend
 
