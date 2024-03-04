@@ -4,8 +4,6 @@ We recommend having a terabyte available if you plan to download all the imagery
 
 ## Downloading imagery from Mapillary
 
-- Please clone the [percept-vsvi-filter](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter) repository and open a shell in that directory.
-
 ## `mapillary_jpg_download.py`
 
 This is the step where you get to decide what region of the world you wish to study. But first, be sure you have obtained the software dependencies. You will need Python v3.6 or higher, and you can either run `pip install -r requirements.txt` to get all the requirements for all of the scripts in the preparation suite, or you can specifically run `pip install mercantile mapbox_vector_tile vt2geojson pillow requests` if you do not plan to use any of the other scripts. There is also a Docker option, see the [README](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter#alternative-docker-set-up).
