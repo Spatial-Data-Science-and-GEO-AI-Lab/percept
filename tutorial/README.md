@@ -10,6 +10,8 @@ You will need a Mapillary developer API key in order to run the script that down
 
 In the end, you will need to copy the text in the field `Client Token` from the developer dashboard and save it in a file, we recommend calling that file `token.txt` and putting that file in the `percept-vsvi-filter` directory that you will `git-clone` in the next step, where the `mapillary_jpg_download.py` script lives.
 
+Tokens are like passwords, so do NOT commit the token file to a repository, do not include your token in any code file, and in fact if you use `git` then adding `token.txt` to your `.gitignore` file is a good idea (there are similar features in other version control systems too).
+
 ## Downloading the imagery from Mapillary
 
 Please see [downloading.md](downloading.md).
