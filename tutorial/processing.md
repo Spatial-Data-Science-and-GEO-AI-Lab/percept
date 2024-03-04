@@ -16,3 +16,4 @@ The end result will be that `<seqdir>` will be populated with `.npz` (compressed
 
 The process is interruptible and restartable. You can press Control-C to interrupt it. When you restart the command, it will find where it left off and pick up from there, unless you specify the `--overwrite` option.
 
+Once finished you should create a list of all the `.npz` files and save it in a text file (one name per line). This can be done easily using `find <seqdir> -name '*.npz' > list-of-npz-files.txt`, for example.
