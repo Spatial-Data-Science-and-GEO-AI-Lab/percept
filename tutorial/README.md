@@ -14,3 +14,11 @@ In the end, you will need to copy the text in the field `Client Token` from the 
 
 Please see [downloading.md](downloading.md).
 
+## Processing and filtering the imagery
+
+## Configuring the backend
+
+## Configuring the frontend
+
+(under construction)
+
