@@ -1,6 +1,6 @@
 # Processing the downloaded imagery
 
-We assume you have downloaded imagery as per the instructions in [downloading](downloading.md) and you have the imagery stored in the directory `<seqdir>`.
+We assume you have downloaded imagery as per the instructions in [downloading](downloading.md) and you have the imagery stored in the directory `<seqdir>` and the Mapillary tiles GeoJSON cache stored in `<tile_cache_dir>`.
 
 ## torch_segm_images.py -- Image Segmentation
 
@@ -17,3 +17,7 @@ The end result will be that `<seqdir>` will be populated with `.npz` (compressed
 The process is interruptible and restartable. You can press Control-C to interrupt it. When you restart the command, it will find where it left off and pick up from there, unless you specify the `--overwrite` option.
 
 Once finished you should create a list of all the `.npz` files and save it in a text file (one name per line). This can be done easily using `find <seqdir> -name '*.npz' > list-of-npz-files.txt`, for example.
+
+## make_tiles_db.py -- Build a quick-look-up database of the tile GeoJSON information
+
+## torch_process_segm.py -- Find road center-lines and analyze image quality
