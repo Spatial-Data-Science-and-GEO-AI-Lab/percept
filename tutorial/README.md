@@ -19,14 +19,14 @@ We highly recommend installing NodeJS using [Node Version Manager (nvm)](https:/
 
 Most of the necessary software is available from the standard packages repository:
 
-- `apt-get install -y git python3 postgresql postgresql-postgis apache2`
+- `apt-get install -y git python3-pip postgresql postgresql-postgis apache2`
 
 If you have an older version of Debian or Ubuntu then you will have to look into 'backports', or better yet, upgrade (especially if this is going to be a public-facing server).
 
 ### RedHat / Fedora / CentOS or EL 7
 
 On a recent version of a RedHat-based distro you should be able to use Yum simply with:
-- `yum -y install git python3 postgresql postgresql-server postgis httpd`
+- `yum -y install git python3-pip postgresql postgresql-server postgis httpd`
 
 However, on older releases like CentOS or Enterprise Linux 7 then you will need additional steps to get PostgreSQL 13 or higher.
 
