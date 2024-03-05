@@ -18,6 +18,11 @@ In the end, you will need to copy the text in the field `Client Token` from the 
 
 Tokens are like passwords, so do NOT commit the token file to a repository, do not include your token in any code file, and in fact if you use `git` then adding `token.txt` to your `.gitignore` file is a good idea (there are similar features in other version control systems too).
 
+## Preparation overview
+<img src="prep-diag.jpg" width="800"/>
+
+The downloading and processing steps, visualized.
+
 ## Downloading the imagery from Mapillary
 
 Please see the [Downloading](downloading.md) chapter.
