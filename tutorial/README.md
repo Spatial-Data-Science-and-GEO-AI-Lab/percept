@@ -49,10 +49,10 @@ In the end, you will need to copy the text in the field `Client Token` from the 
 
 Tokens are like passwords, so do NOT commit the token file to a repository, do not include your token in any code file, and in fact if you use `git` then adding `token.txt` to your `.gitignore` file is a good idea (there are similar features in other version control systems too).
 
-## Preparation overview
-<img src="prep-diag.jpg" width="800"/>
+# Preparation overview
 
-The downloading and processing steps, visualized.
+The downloading and processing steps, visualized:
+<img src="prep-diag.jpg" width="800"/>
 
 ## Downloading the imagery from Mapillary
 
@@ -61,6 +61,13 @@ Please see the [Downloading](downloading.md) chapter.
 ## Processing and filtering the imagery
 
 Please see the [Processing](processing.md) chapter.
+
+# Client/Server overview
+
+We will walk through the steps of configuring an image server, the backend and the frontend to serve the web-app as depicted in this diagram:
+<img src="sys-diag.jpg" width="800"/>
+
+## Configuring the image server
 
 ## Configuring the backend
 
