@@ -69,6 +69,8 @@ We will walk through the steps of configuring an image server, the backend and t
 
 ## Configuring the image server
 
+Please see the [Apache2 web server](apache.md) chapter.
+
 ## Configuring the backend
 
 ## Configuring the frontend
