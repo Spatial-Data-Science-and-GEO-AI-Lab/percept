@@ -26,10 +26,11 @@ If not, run `a2enmod proxy` and then reload your configuration using `systemctl 
 You should see output from `httpd -M | grep proxy` showing the `proxy_module`.
 
 If not, edit the file `/etc/httpd/conf.modules.d/00-proxy.conf` and uncomment (remove the leading `#`) the following lines:
-      LoadModule proxy_module modules/mod_proxy.so
-      LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so
-      LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
-      LoadModule proxy_http_module modules/mod_proxy_http.so
+
+    LoadModule proxy_module modules/mod_proxy.so
+    LoadModule lbmethod_byrequests_module modules/mod_lbmethod_byrequests.so
+    LoadModule proxy_balancer_module modules/mod_proxy_balancer.so
+    LoadModule proxy_http_module modules/mod_proxy_http.so
 
 Then reload your configuration with `systemctl reload httpd`.
 
