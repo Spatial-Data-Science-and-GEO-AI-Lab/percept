@@ -15,18 +15,20 @@ We assume some basic familiarity with Linux and being able to run commands from 
 
 We highly recommend installing NodeJS using [Node Version Manager (nvm)](https://github.com/nvm-sh/nvm) and NOT from your Linux distribution's package manager. This way, you can choose the specific version of NodeJS to use with this server (e.g., most likely you will want to choose version 18 for now).
 
+With nvm, go ahead and install NodeJS v18 using the following command: `nvm install 18` and you can enable it right away with the command `node use 18`.
+
 ### Debian (bullseye v11 or above) / Ubuntu (jammy v22.04 or above)
 
 Most of the necessary software is available from the standard packages repository:
 
-- `apt-get install -y git python3-pip postgresql postgresql-postgis apache2`
+- `apt-get install -y git python3-pip postgresql postgresql-postgis apache2 screen sudo`
 
 If you have an older version of Debian or Ubuntu then you will have to look into 'backports', or better yet, upgrade (especially if this is going to be a public-facing server).
 
 ### RedHat / Fedora / CentOS or EL 7
 
 On a recent version of a RedHat-based distro you should be able to use Yum simply with:
-- `yum -y install git python3-pip postgresql postgresql-server postgis httpd`
+- `yum -y install git python3-pip postgresql postgresql-server postgis httpd screen sudo`
 
 However, on older releases like CentOS or Enterprise Linux 7 then you will need additional steps to get PostgreSQL 13 or higher.
 
@@ -34,6 +36,10 @@ However, on older releases like CentOS or Enterprise Linux 7 then you will need 
 - `yum -y install https://download.postgresql.org/pub/repos/yum/reporpms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm`
 - `yum -y update`
 - `yum -y install postgresql13 postgresql13-server postgis33_13`
+
+## Create a normal user
+
+Log into your server machine as the user under which you wish to run the backend (and frontend) servers. This should not be root. If you are root, and have not yet made a normal user, then create a user with a suitable name and a secure password (e.g. using the `adduser` command). Be sure to put your normal user in the `sudo` (Debian/Ubuntu) or `wheel` (RedHat) group. You can do this by running a command like `adduser <my_user> sudo` as root. Then go ahead and log into your normal user while continuing this tutorial.
 
 ## Getting our software
 

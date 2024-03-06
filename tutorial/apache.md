@@ -8,7 +8,7 @@ We will assume that you are using [VirtualHost](https://httpd.apache.org/docs/2.
 
 The easiest thing to do on typical Apache installs is to put your configuration in a single file named something like `000-default.conf` (you can choose a more descriptive name if you like, especially if you have multiple virtual hosts and separate configuration files for each one). This goes in the configuration directory, which is usually named `conf.d` and can be found within the Apache configuration directory. On Debian/Ubuntu-based systems that is typically `/etc/apache2/conf.d/` and on RedHat-based systems it is `/etc/httpd/conf.d/` but if you install Apache a different way then you may find configuration files elsewhere.
 
-Be sure to reload your Apache configuration after making changes, `systemctl reload apache2` (Debian/Ubuntu) or `systemctl reload httpd` (RedHat). As usual, you will need root privileges to edit configuration files and run reloading commands.
+Be sure to reload your Apache configuration after making changes, `systemctl reload apache2` (Debian/Ubuntu) or `systemctl reload httpd` (RedHat). As usual, you will need root privileges to edit configuration files and run reloading commands. Therefore, either log in as root while performing these tasks or run commands with the `sudo` command prefixed in front of them, assuming you set up `sudo` as described early in this tutorial.
 
 The remainder of this section assumes you have created a suitable configuration file in the correct configuration directory, and that you have a domain name to fill in for the blank `<domain_name>`.
 
