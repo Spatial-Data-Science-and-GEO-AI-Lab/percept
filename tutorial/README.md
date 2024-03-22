@@ -71,5 +71,4 @@ Please see the [backend](backend.md) chapter.
 
 ## Configuring the frontend
 
-(under construction)
-
+Please see the [frontend](frontend.md) chapter.
