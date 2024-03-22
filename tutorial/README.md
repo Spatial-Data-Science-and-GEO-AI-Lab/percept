@@ -79,6 +79,8 @@ Please see the [Apache2 web server](apache.md) chapter.
 
 ## Configuring the backend
 
+Please see the [backend](backend.md) chapter.
+
 ## Configuring the frontend
 
 (under construction)
