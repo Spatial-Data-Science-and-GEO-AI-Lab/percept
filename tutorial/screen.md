@@ -24,7 +24,7 @@ Open a file named `percept-screenrc` in your home directory and put the followin
     screen 2 bash
     select 2
 
-This assumes that you have downloaded and configured the [backend](backend.md) and [frontend](frontend.md) software, and placed them into the `percept-backend` and `percept-frontend` subdirectories of your home directory, respectively. If not, please adjust the paths in the above example before going further.
+This assumes that you have downloaded and configured the [backend](backend.md) and [frontend](frontend.md) software, and placed them into the `percept-backend` and `percept-frontend` subdirectories of your home directory, respectively. If not, please adjust the paths in the above example before going further. It also assumes that you used `npm run build` on the frontend to build a compiled version that can be served using the `serve -s build` command. If you'd rather use `npm run dev` to run the debug version, then adjust the above example appropriately.
 
 Now if you run `screen -c ~/percept-screenrc` then it will open a screen session and start both frontend and backend servers, and it will open a new terminal window with a plain bash prompt. If you wish to view the output of either server, simply switch to those windows using e.g., `Ctrl-A p`.
 
