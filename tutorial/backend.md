@@ -85,7 +85,7 @@ Reload your Apache configuration.
 
 ## Running the backend server
 
-From the `percept-backend` directory you can run `npm start` to kickstart the backend. We suggest running this inside of a detachable terminal using a program like `screen`, `tmux`, `byobu` or at the very least `nohup` so that it keeps running even if you close the terminal or disconnect your session from the server.
+From the `percept-backend` directory you can run `npm start` to kickstart the backend. We suggest running this inside of a detachable terminal using a program like [GNU screen](screen.md), tmux, byobu or at the very least nohup so that it keeps running even if you close the terminal or disconnect your SSH session from the server.
 
 ## Testing the server configuration
 

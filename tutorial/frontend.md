@@ -63,7 +63,7 @@ This will run a development and debugging server that you can use to try out the
 
 This compiles a production version of the frontend app and begins serving it.
 
-Either way, we suggest running this inside of a detachable terminal using a program like `screen`, `tmux`, `byobu` or at the very least `nohup` so that it keeps running even if you close the terminal or disconnect your session from the server.
+Either way, we suggest running this inside of a detachable terminal using a program like [GNU screen](screen.md), tmux, byobu or at the very least nohup so that it keeps running even if you close the terminal or disconnect your SSH session from the server.
 
 ## Testing the frontend
 

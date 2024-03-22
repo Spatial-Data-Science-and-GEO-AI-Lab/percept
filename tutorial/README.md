@@ -72,3 +72,8 @@ Please see the [backend](backend.md) chapter.
 ## Configuring the frontend
 
 Please see the [frontend](frontend.md) chapter.
+
+## Finalising matters
+
+* Learn about using [GNU screen](screen.md) to manage the backend and frontend servers as long-running processes in the background.
+* Set up the production database and run the production frontend server (under construction)
