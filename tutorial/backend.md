@@ -16,7 +16,7 @@ You will now have databases named `percept-test`, `percept-dev` and `percept-pro
 
 ## Getting the code
 
-You should have NodeJS installed as described in the Dependencies section. Obtain a copy of the `percept-backend` source code from GitHub and put it into any convenient directory. For example, `cd $HOME && git clone https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-backend && cd percept-backend`.
+You should have NodeJS installed as described in the Dependencies section of the [tutorial start](README.md). Obtain a copy of the `percept-backend` source code from GitHub and put it into any convenient directory. For example, `cd $HOME && git clone https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-backend && cd percept-backend`.
 
 You should now be in the `percept-backend` directory.
 
@@ -83,9 +83,9 @@ Recall that when you [configured the image server](apache.md) you placed a `Prox
 
 Reload your Apache configuration.
 
-## Running the backend
+## Running the backend server
 
-From the `percept-backend` directory you can run `npm start` to kickstart the backend. We suggest running this inside of a detachable terminal using a program like `screen`, `tmux`, `byobu` or at the very least `nohup` so that it keeps running even if you close the terminal or disconnect from the server.
+From the `percept-backend` directory you can run `npm start` to kickstart the backend. We suggest running this inside of a detachable terminal using a program like `screen`, `tmux`, `byobu` or at the very least `nohup` so that it keeps running even if you close the terminal or disconnect your session from the server.
 
 ## Testing the server configuration
 
