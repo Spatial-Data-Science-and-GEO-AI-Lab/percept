@@ -2,6 +2,20 @@
 
 We recommend having a terabyte available if you plan to download all the imagery within, for example, a 25km x 25km region around a city like Amsterdam. In fact, many cities will have much less; Amsterdam enjoys a very large and dense dataset of panoramic imagery, which tends to take up much more disk space than ordinary photographs. Please investigate your region of interest on the [Mapillary map app](https://www.mapillary.com/app/) to get a feel for how much imagery and how much panoramic imagery is available. We will assume that you are cloning the scripts and working within the drive that has the available space, therefore our examples will use relative paths, but please feel free to use whichever paths make sense for your system.
 
+## Getting our software
+
+Please clone or download the [percept-vsvi-filter](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter) repository and open a shell in that directory.
+
+e.g. `git clone https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter && cd percept-vsvi-filter`
+
+## Mapillary API key
+
+You will need a Mapillary developer API key in order to run the script that downloads imagery. This can be obtained free-of-charge from the [Mapillary Developer Dashboard](https://www.mapillary.com/dashboard/developers). You will need to register a Mapillary account first, and then you can register an application on the dashboard. Please simply choose something reasonably descriptive for the App Name and Description. Remember that you are ultimately responsible for using the developer access according to the [terms of service](https://www.mapillary.com/terms); read everything of course, but in particular, consider section 11 **Additional Terms for Developers**. Our scripts are provided as-is and come with NO warranty and NO guarantee. To the best of our knowledge these scripts comply with the terms of service for non-commercial usage, provided that you attribute the downloaded imagery to Mapillary if and when you serve them from your own servers.
+
+In the end, you will need to copy the text in the field `Client Token` from the developer dashboard and save it in a file, we recommend calling that file `token.txt` and putting that file in the `percept-vsvi-filter` directory that you obtained in the previous step, where the `mapillary_jpg_download.py` script lives.
+
+Tokens are like passwords, so do NOT commit the token file to a repository, do not include your token in any code file, and in fact if you use `git` then adding `token.txt` to your `.gitignore` file is a good idea (there are similar features in other version control systems too).
+
 ## Downloading imagery from Mapillary
 
 ## `mapillary_jpg_download.py`

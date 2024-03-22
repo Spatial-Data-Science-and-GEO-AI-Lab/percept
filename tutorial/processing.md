@@ -2,7 +2,7 @@
 
 ## Parameters
 
-We assume you have downloaded imagery as per the instructions in [downloading](downloading.md) and you have the imagery stored in the directory `<seqdir>` and the Mapillary tiles GeoJSON cache stored in `<tile_cache_dir>`. For the first step below (image segmentation) you only need to know `<seqdir>`, which you should already have, so you can get image segmentation started while deciding on the rest of these parameters below.
+We assume you have downloaded our software and imagery as per the instructions in [downloading](downloading.md), that you are working within the `percept-vsvi-filter` directory with our software, and you have the imagery stored in the directory `<seqdir>` and the Mapillary tiles GeoJSON cache stored in `<tile_cache_dir>`. For the first step below (image segmentation) you only need to know `<seqdir>`, which you should already have, so you can get image segmentation started while deciding on the rest of these parameters below.
 
 You are eventually going to need to decide where imagery is going to live in your filesystem and also where on your website it is going to be accessible. We call these the `<system_path_base>` and `<web_path_base>` pathname prefices, respectively. For example, if you have set aside a data partition named `/data` on your filesystem then it may be a good idea to set the `<system_path_base>` to '`/data/img`'. Then you can configure your web server (later) to serve all the imagery from locations under `/img` of your website, so then a reasonable value for `<web_path_base>` would be '`/img`'.
 
