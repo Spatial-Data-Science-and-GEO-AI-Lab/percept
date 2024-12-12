@@ -15,7 +15,7 @@ Please see the following repositories for the component sub-projects:
 
 ## Associated projects
 Please see the following websites for the [upcoming] human perception model and Huggingface demos:
-* [KNN model on GitHub](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-clip-model)
+* [KNN model on GitHub](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-knn-model)
 * [Percept Map Explorer](https://huggingface.co/spaces/Spatial-Data-Science-and-GEO-AI-Lab/percept-map): end-to-end demo, click on a map and get modelled perception scores for that point.
 
 ## Publications
