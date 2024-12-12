@@ -13,6 +13,11 @@ Please see the following repositories for the component sub-projects:
 * [Frontend](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-frontend)
 * [Backend](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-backend)
 
+## Associated projects
+Please see the following websites for the [upcoming] human perception model and Huggingface demos:
+* [KNN model on GitHub](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-clip-model)
+* [Perception map demo](https://huggingface.co/spaces/mdanish/percept-map): end-to-end, click on a map and get modelled perception scores for that point.
+
 ## Publications
 
 **A citizen science toolkit to collect human perceptions of urban environments using open street view images**
