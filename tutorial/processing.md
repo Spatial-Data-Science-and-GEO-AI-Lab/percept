@@ -28,7 +28,9 @@ Once finished you should create a list of all the `.npz` files and save it in a 
 
 ## make_tiles_db.py -- Build a quick-look-up database of the tile GeoJSON information
 
-We recommend taking a moment to build a tile cache database using the `make_tiles_db.py` script, to speed up subsequent steps. Just run a command like:
+We recommend taking a moment to build a tile cache database using the `make_tiles_db.py` script, to speed up subsequent steps. If you have not done `pip install -r requirements.txt` and you are not using the Docker image, then be sure to `pip install imagesize` at this point.
+
+Now, just run a command like:
 
 `./make_tiles_db.py --seqs <seqdir> -o tiles.pkl <tile_cache_dir>`
 
@@ -44,7 +46,7 @@ However, we recommend running it with `--seqs`, if not now then later, if you in
 
 ### Set-up
 
-If you have not yet installed all the dependencies using `pip install -r requirements.txt` and you are not using the [Docker option](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter#alternative-docker-set-up), then now is the time to install those dependencies. Manually, that means `pip install numpy torch transformers scipy scikit-image opencv-python-headless`.
+If you have not yet installed all the dependencies using `pip install -r requirements.txt` and you are not using the [Docker option](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/percept-vsvi-filter#alternative-docker-set-up), then now is the time to install those dependencies. Manually, that means `pip install numpy torch transformers scipy scikit-image opencv-python-headless torchvision`.
 
 ### Getting a list of `.npz` files
 
