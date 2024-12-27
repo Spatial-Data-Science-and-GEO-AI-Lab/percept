@@ -52,7 +52,7 @@ In the end, you will be left with a bunch of GeoJSON files in `<tile_cache_dir>`
 
 ## Alternative: download only the images at intervals of X meters
 
-The previous way of downloading images gathers every possible image within the defined region. This will ensure that you have every possible option, even if you have to throw out a bunch of them for quality reasons. However, if you would rather download many fewer images (saving a lot of time and bandwidth), then you can arrange to only download the images according to the geographic specification that you want. In our case, we have always looked for the SVI that is closest to a network of points that is laid out so that there is a point every X meters along every road, path or way. If you wish to use the same specification then you can use the `make_street_points.py` script to generate a GeoJSON (or other format) file that contains points within the defined region that are spaced at every X meters along every road, etc.
+The previous way of downloading images gathers every possible image within the defined region. This will ensure that you have every possible option, even if you have to throw out a bunch of them for quality reasons. However, if you would rather download many fewer images (saving a lot of time and bandwidth), then you can arrange to only download the images according to the geographic specification that you want. In our case, we have always looked for the SVI that is closest to a network of points that is laid out so that there is a point every X meters along every road, path or way. If you wish to use this same type of specification then you can use the `make_street_points.py` script to generate a GeoJSON (or other format) file that contains points within the defined region that are spaced at every X meters along every road, etc.
 
 Example: generate points within the region defined by `myconfig.json` (same as above), with coordinate reference system SRID 28992, at intervals of 50 meters, and saved into file `mygrid.geojson`:
 
@@ -73,7 +73,10 @@ Import `mygrid.geojson` using `ogr2ogr` into a table named `mygrid`:
     export GRIDTABLE=mygrid
     ogr2ogr -f PostgreSQL "dbname=$DB" mygrid.geojson $GRIDTABLE
 
+([ogr2ogr](https://gdal.org/en/stable/programs/ogr2ogr.html) is a separately available program for geographic data manipulation; from package 'gdal-bin' in Debian (APT) or package 'gdal' in RedHat (yum))
+
 Import the tiles database into a table named `mytiles`:
+
     export TILESTABLE=mytiles
     for f in <tile_cache_dir>/*; do ogr2ogr -append -f PostgreSQL "PG:dbname=$DB" $f -nln $TILESTABLE; done
 
