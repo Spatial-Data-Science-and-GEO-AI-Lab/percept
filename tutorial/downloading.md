@@ -55,12 +55,14 @@ In the end, you will be left with a bunch of GeoJSON files in `<tile_cache_dir>`
 The previous way of downloading images gathers every possible image within the defined region. This will ensure that you have every possible option, even if you have to throw out a bunch of them for quality reasons. However, if you would rather download many fewer images (saving a lot of time and bandwidth), then you can arrange to only download the images according to the geographic specification that you want. In our case, we have always looked for the SVI that is closest to a network of points that is laid out so that there is a point every X meters along every road, path or way. If you wish to use the same specification then you can use the `make_street_points.py` script to generate a GeoJSON (or other format) file that contains points within the defined region that are spaced at every X meters along every road, etc.
 
 Example: generate points within the region defined by `myconfig.json` (same as above), with coordinate reference system SRID 28992, at intervals of 50 meters, and saved into file `mygrid.geojson`:
+
 `./make_street_points.py -c myconfig.json -S 28992 -I 50 -o mygrid.geojson`
 
 Next, you should obtain the Mapillary metadata using the `--tiles-only` option to `mapillary_jpg_download.py`. This will not download JPG files, it only gets GeoJSON files that contain all the metadata about the SVIs, and saves them in the aforementioned `tile_cache_dir`.
+
 `./mapillary_jpg_download.py -c myconfig.json --tiles-only`
 
-Now we will use PostgreSQL (v 13+)/PostGIS to do the heavy-duty geographic processing. This tutorial calls the working database `percept-preprocess` but you can use any name.
+Now we will use PostgreSQL (v 13+)/PostGIS to do the heavy-duty geographic processing. This tutorial calls the working database `percept-preprocess` but you can use any name: *(The following examples use `bash` syntax to set environment variables, if you are using another shell then be aware and use their syntax instead)*
 
     export DB=percept-preprocess
     sudo -u postgres createdb -O $USER $DB
@@ -82,6 +84,7 @@ we are using SRID=28992.
     export SRID=<srid>
 
 Add local geometry columns and indices:
+
     psql $DB <<EOF
     ALTER TABLE $GRIDTABLE ADD COLUMN geo GEOMETRY(POINT, $SRID);
     ALTER TABLE $TILESTABLE ADD COLUMN geo GEOMETRY(POINT, $SRID);
@@ -92,6 +95,7 @@ Add local geometry columns and indices:
     EOF
 
 Perform a geo-join to find the relevant Mapillary image IDs that we want to download (might take a while):
+
     psql $DB <<EOF
     CREATE TABLE myresults AS
     WITH ranked AS (
@@ -111,12 +115,15 @@ Perform a geo-join to find the relevant Mapillary image IDs that we want to down
     EOF
 
 Extract the results:
+
     psql -At -c 'SELECT imgid FROM myresults;' $DB > my_imgid_list.txt
 
 Now you can kick-off the `mapillary_jpg_download.py` process with a set of specific image IDs to fetch:
+
 `./mapillary_jpg_download.py -c myconfig.json --imgid-file my_imgid_list.txt`
 
 The output may look like this, and that is normal:
+
     [...]
     Image ID 802315961410511 is not in the --imgid-file list, skipping.
     Image ID 508836514276730 is not in the --imgid-file list, skipping.
