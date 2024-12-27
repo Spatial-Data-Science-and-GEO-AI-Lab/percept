@@ -30,9 +30,15 @@ Once finished you should create a list of all the `.npz` files and save it in a 
 
 We recommend taking a moment to build a tile cache database using the `make_tiles_db.py` script, to speed up subsequent steps. Just run a command like:
 
-`./make_tiles_db.py -o tiles.pkl <tile_cache_dir>`
+`./make_tiles_db.py --seqs <seqdir> -o tiles.pkl <tile_cache_dir>`
 
 Then the tile cache database will be stored in `tiles.pkl` (or whichever filename you choose to use).
+
+Note that the above version of the command with the `--seqs` option takes a lot longer because it inspects every image file and extracts metadata; this will probably take on the order of 30 min to 1 hour for 20,000 panoramic images. If you want a faster version then omit the `--seqs` option and that will be sufficient for the survey-making process:
+
+`./make_tiles_db.py -o tiles.pkl <tile_cache_dir>`
+
+However, we recommend running it with `--seqs`, if not now then later, if you intend to use the imagery as input to model evaluation, e.g. with the `batch_rate.py` script found in the examples of the [svi_percept](https://github.com/Spatial-Data-Science-and-GEO-AI-Lab/svi_percept) Python module. Running it with `--seqs` will populate the saved tiles database with image information.
 
 ## torch_process_segm.py -- Find road center-lines and analyze image quality
 
